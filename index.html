@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Version</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&family=Jura:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="loader">
+
+  <div class="code-bg" id="codeBg"></div>
+
+  <div class="loader-scene" id="loaderScene">
+    <div class="laptop" id="laptopEl">
+
+      <div class="laptop-lid">
+        <div class="laptop-screen">
+          <div class="screen-glow"></div>
+          <div class="screen-code" id="screenCode"></div>
+          <div class="loading-text">Loading</div>
+          <div class="screen-bar-wrap">
+            <div class="screen-bar" id="screenBar"></div>
+          </div>
+          <div class="screen-percent" id="screenPercent">0%</div>
+        </div>
+      </div>
+
+      <div class="laptop-hinge"></div>
+      <div class="laptop-base"></div>
+    </div>
+    <div class="laptop-reflection"></div>
+  </div>
+
+</div>
+<!-- /LOADER -->
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+<header class="top">
+  <div class="left menu">
+    <button class="pill menu-btn" type="button" aria-expanded="false" aria-controls="menuPanel">
+      <span class="icon" aria-hidden="true">
+        <span class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+        </span>
+      </span>
+      <span class="menu-label">Menu</span>
+    </button>
+
+    <div class="menu-panel" id="menuPanel" role="menu">
+      <button class="menu-item active" type="button" role="menuitem">Home</button>
+      <button class="menu-item" type="button" role="menuitem">Services</button>
+      <button class="menu-item" type="button" role="menuitem">Our work</button>
+      <button class="menu-item" type="button" role="menuitem">About us</button>
+      <button class="menu-item" type="button" role="menuitem">FAQ</button>
+      <button class="menu-item" type="button" role="menuitem" data-open-contact>Contact</button>
+    </div>
+  </div>
+
+<div class="brand" aria-label="site-side">
+  <div class="brand-layer brand-layer--white">
+    <span class="brand-text">site</span>
+    <i class="mark" aria-hidden="true"></i>
+    <span class="brand-text">side</span>
+  </div>
+  <div class="brand-layer brand-layer--black" aria-hidden="true">
+    <span class="brand-text">site</span>
+    <i class="mark mark--dark" aria-hidden="true"></i>
+    <span class="brand-text">side</span>
+  </div>
+</div>
+
+
+  <button class="pill right" type="button" id="topContactBtn" data-open-contact>
+    <span>Contact</span>
+  </button>
+</header>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<main class="hero" id="home">
+  <div class="stage">
+    <h1 class="word word-left parallax" data-speed="0.025">We build</h1>
+    <h1 class="word word-right parallax" data-speed="0.025">digital products</h1>
+
+    <div class="center">
+      <div class="parallax" data-speed="0.06">
+        <img class="art-img parallax" src="images/programming-background-concept.png" alt="Artwork">
+        <div class="caption parallax" data-speed="0.02">
+          <div class="cap-text">
+            Modern Web Studio<br>
+            focused on performance &amp; growth
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section class="about-ask" id="about">
+  <div class="about-ask-inner">
+
+    <div class="about-ask-left">
+      <h2>About us</h2>
+
+      <p>
+        We’re a small studio that builds fast, clean websites and web apps with strong design and measurable business impact.
+        No random animations “just because”. Everything serves a purpose: clarity, trust, conversions.
+      </p>
+
+      <button class="about-btn" id="learnMoreBtn">Learn more</button>
+    </div>
+    <div class="about-ask-right">
+     <div class="card-stack">
+       <div class="stack-card stack-card--1">
+        <img src="images/image1.jpg" alt="">
+       </div>
+     <div class="stack-card stack-card--2">
+        <img src="images/81361.jpg" alt="">
+     </div>
+    <div class="stack-card stack-card--3">
+      <img src="images/1.jpg" alt="">
+    </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- =========================================================
+     WHAT KINF OF SIDES WE ARE DOING
+========================================================= -->
+<div class="WhatAreWeDoing">
+  
+</div>
+
+
+<!-- =========================================================
+     RESULTS / METRICS
+========================================================= -->
+<section class="metrics" id="results" data-anim="type">
+  <div class="wrap">
+    <h2 class="section-title">Results clients care about</h2>
+
+    <div class="metrics-grid">
+      <div class="metric">
+        <div class="metric-num">+30%</div>
+        <div class="metric-label">avg. conversion uplift*</div>
+        <div class="metric-note">*example benchmark, replace with real numbers</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">&lt;2s</div>
+        <div class="metric-label">target load time</div>
+        <div class="metric-note">for main landing pages</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">2–6</div>
+        <div class="metric-label">weeks delivery</div>
+        <div class="metric-note">depending on scope</div>
+      </div>
+      <div class="metric">
+        <div class="metric-num">SEO</div>
+        <div class="metric-label">technical-ready</div>
+        <div class="metric-note">structure + basics included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TECH STACK
+========================================================= -->
+<!-- =========================================================
+     TECH STACK  — вставить вместо <section class="stack" ...>
+========================================================= -->
+<section class="stack" id="stack">
+  <div class="stack-glow" aria-hidden="true"></div>
+  <div class="wrap">
+
+    <div class="stack-head">
+      <h2 class="stack-title " data-speed="-0.05" data-anim="type">
+        Our Technology Stack
+      </h2>
+      <p class="stack-sub" data-anim="fade">
+        Tools we use to ship fast, scalable&nbsp;websites
+      </p>
+    </div>
+
+    <div class="stack-icons " aria-label="Technology stack">
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(40px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L3 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 6L21 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stack-label">HTML / CSS / JS</div>
+        <div class="stack-desc">Semantic, accessible markup with pixel-perfect styling</div>
+      </div>
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(-30px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="1.8" fill="currentColor"/>
+            <path d="M12 3c3.5 0 6.5 4 6.5 9s-3 9-6.5 9-6.5-4-6.5-9 3-9 6.5-9Z" stroke="currentColor" stroke-width="1.8" opacity="0.9"/>
+            <path d="M4 8.2c1.7-3 6.6-3.2 10.9-.7 4.3 2.5 6.4 6.7 4.7 9.6-1.7 3-6.6 3.2-10.9.7C4.4 15.3 2.3 11.1 4 8.2Z" stroke="currentColor" stroke-width="1.8" opacity="0.65"/>
+            <path d="M20 8.2c-1.7-3-6.6-3.2-10.9-.7C4.8 10 2.7 14.2 4.4 17.1c1.7 3 6.6 3.2 10.9.7 4.3-2.5 6.4-6.7 4.7-9.6Z" stroke="currentColor" stroke-width="1.8" opacity="0.65"/>
+          </svg>
+        </div>
+        <div class="stack-label">React / Next.js</div>
+        <div class="stack-desc">Component-driven UI with SSR and edge performance</div>
+      </div>
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(-30px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 7.5C5 6.1 6.1 5 7.5 5h9C17.9 5 19 6.1 19 7.5v2C19 10.9 17.9 12 16.5 12h-9C6.1 12 5 10.9 5 9.5v-2Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 14.5C5 13.1 6.1 12 7.5 12h9c1.4 0 2.5 1.1 2.5 2.5v2c0 1.4-1.1 2.5-2.5 2.5h-9C6.1 19 5 17.9 5 16.5v-2Z" stroke="currentColor" stroke-width="2" opacity="0.9"/>
+            <path d="M8 8h.01M8 15h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="stack-label">Node / APIs</div>
+        <div class="stack-desc">Scalable backends and third-party integrations</div>
+      </div>
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(30px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 15l3-3 3 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 9h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="stack-label">SEO &amp; Analytics</div>
+        <div class="stack-desc">Rankings, tracking and data-driven decisions</div>
+      </div>
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(30px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6.7 18.3a8 8 0 1 1 10.6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 12l4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 19h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="stack-label">Performance (CWV)</div>
+        <div class="stack-desc">Core Web Vitals optimised for green scores</div>
+      </div>
+
+      <div class="stack-item " data-speed="0.05" data-base-transform="translateY(-40px)">
+        <div class="stack-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6 6h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M9 6v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+            <path d="M15 12v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+            <path d="M11 18v0" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="stack-label">CMS (Headless / Custom)</div>
+        <div class="stack-desc">Content editors love, developers don't hate</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     HORIZONTAL AREA
+========================================================= -->
+<section class="hscroll" id="hscroll">
+  <div class="hscroll-sticky">
+    <div class="hscroll-track">
+
+      <!-- ===================== PROCESS SLIDE ===================== -->
+      <section class="process" id="process">
+        <div class="process-inner">
+          <h2 class="section-title " data-speed="0.01">How we build websites?</h2>
+
+          <div class="process-grid">
+            <div class="process-item" >
+              <div class="card">
+                <div class="card-face card-front">
+                  <div class="card-center">
+                    <span class="step">01</span>
+                    <h3>Strategy</h3>
+                    <i data-lucide="map" class="card-icon"></i>
+                  </div>
+                </div>
+
+                <div class="card-face card-back">
+                  <p>
+                    Strategy is the foundation of every project. We start by diving into the business: understanding the
+                    product, audience, competitors, and market positioning. Our goal is to define what the website must
+                    achieve — generate leads, drive sales, build trust, or strengthen the brand.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-item" >
+              <div class="card">
+                <div class="card-face card-front">
+                  <div class="card-center">
+                    <span class="step">02</span>
+                    <h3>Design</h3>
+                    <i data-lucide="pen-tool" class="card-icon"></i>
+                  </div>
+                </div>
+
+                <div class="card-face card-back">
+                  <p>
+                    Design is more than visuals — it’s communication. We begin with wireframes to map structure, layout,
+                    and user flow before adding visual elements. After approval, we develop the visual concept aligned
+                    with the brand identity and target audience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-item" >
+              <div class="card">
+                <div class="card-face card-front">
+                  <div class="card-center">
+                    <span class="step">03</span>
+                    <h3>Development</h3>
+                    <i data-lucide="code" class="card-icon"></i>
+                  </div>
+                </div>
+
+                <div class="card-face card-back">
+                  <p>
+                    Development is where ideas become a functional product. We build a clean, scalable, high-performance
+                    website, focusing on speed, responsive behavior, SEO fundamentals, and integrations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-item" >
+              <div class="card">
+                <div class="card-face card-front">
+                  <div class="card-center">
+                    <span class="step">04</span>
+                    <h3>Support</h3>
+                    <i data-lucide="life-buoy" class="card-icon"></i>
+                  </div>
+                </div>
+
+                <div class="card-face card-back">
+                  <p>
+                    Support begins after launch. We provide technical maintenance, security updates, and performance
+                    monitoring to ensure stability and continuous improvements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+<section class="scroll-hint"  >
+    <div class="scroll-track">
+      <div class="scroll-content">
+        <spa data-anim="grow">→</span data-anim="grow"><span data-anim="grow">→</span><span data-anim="grow">→</span>
+      </div>
+    </div>
+</section>
+
+<section class="our-work" id="work">
+
+  <div class="ow-head">
+    <div></div>
+    <h2 class="ow-title">Our Work</h2>
+    <div class="ow-nav">
+    </div>
+  </div>
+
+  <div class="ow-track">
+
+    <div class="ow-card">
+      <div class="ow-card-inner">
+        <div class="ow-card-left">
+          <span class="ow-tag">Barbershop</span>
+          <h3 class="ow-card-title">Black Cuts<br>Studio</h3>
+          <p class="ow-card-desc">Landing page for a premium barbershop in Vienna.</p>
+          <a class="ow-card-link" href="#" target="_blank">View project →</a>
+        </div>
+        <div class="ow-card-right">
+          <img src="images/image 5.png" alt="">
+          <a class="ow-card-btn" href="#" target="_blank">Open project ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ow-card">
+      <div class="ow-card-inner">
+        <div class="ow-card-left">
+          <span class="ow-tag">E-commerce</span>
+          <h3 class="ow-card-title">Nova<br>Shop</h3>
+          <p class="ow-card-desc">Full e-commerce store with custom CMS and fast checkout.</p>
+          <a class="ow-card-link" href="#" target="_blank">View project →</a>
+        </div>
+        <div class="ow-card-right">
+          <img src="images/image 20.png" alt="">
+          <a class="ow-card-btn" href="#" target="_blank">Open project ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ow-card">
+      <div class="ow-card-inner">
+        <div class="ow-card-left">
+          <span class="ow-tag">SaaS</span>
+          <h3 class="ow-card-title">Trackr<br>App</h3>
+          <p class="ow-card-desc">Web app for project tracking. Clean UI, real-time updates.</p>
+          <a class="ow-card-link" href="#" target="_blank">View project →</a>
+        </div>
+        <div class="ow-card-right">
+          <img src="images/81361.jpg" alt="">
+          <a class="ow-card-btn" href="#" target="_blank">Open project ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ow-counter">
+    <span id="owCurrent">1</span> / <span id="owTotal">3</span>
+  </div>
+
+</section>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PRICING
+========================================================= -->
+
+<section class="pricing" data-anim="fade">
+
+  <div class="pricing__bg-title">Pricing</div>
+
+  <div class="pricing__container">
+
+    <article class="pricing-card">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Standart Plan</p>
+        <h3 class="pricing-card__price">1000€</h3>
+
+        <ul class="pricing-card__features">
+          <li>Send up to 2 transfers per month</li>
+          <li>Basic transaction history</li>
+          <li>Email support</li>
+          <li>Limited currency support (USD, EUR, GBP)</li>
+          <li>Basic security features</li>
+        </ul>
+
+        <button class="pricing-card__btn" data-open-contact>
+          Get Started
+        </button>
+      </div>
+    </article>
+
+
+    <article class="pricing-card pricing-card--featured">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Standard Plan</p>
+        <h3 class="pricing-card__price">3500€</h3>
+
+        <ul class="pricing-card__features">
+          <li>Unlimited transfers</li>
+          <li>Transaction history with export options</li>
+          <li>Priority email support</li>
+          <li>Expanded currency support</li>
+          <li>Advanced security features</li>
+        </ul>
+
+        <button class="pricing-card__btn" data-open-contact>
+          Get Started
+        </button>
+      </div>
+    </article>
+
+
+    <article class="pricing-card">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Free Plan</p>
+        <h3 class="pricing-card__price">10000€</h3>
+
+        <ul class="pricing-card__features">
+          <li>Unlimited transfers with priority processing</li>
+          <li>Comprehensive transaction analytics</li>
+          <li>24/7 priority support</li>
+          <li>Full currency support</li>
+          <li>Enhanced security features</li>
+        </ul>
+
+        <button class="pricing-card__btn" data-open-contact>
+          Get Started
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ + CONTACT SPLIT
+========================================================= -->
+<section class="contact-faq-split" id="faq" data-anim="fade">
+  <div class="split-inner">
+
+    <div class="split-left">
+      <h2 class="section-title left-align">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="faq-clean-list">
+        <div class="faq-clean-item">
+          <h3>How long does a website take?<span class="ind">+</span></h3>
+          <p>Usually between 2–6 weeks depending on scope.</p>
+        </div>
+
+        <div class="faq-clean-item">
+          <h3>What do you need to start?<span class="ind">+</span></h3>
+          <p>Basic information about your business, goals and content.</p>
+        </div>
+
+        <div class="faq-clean-item">
+          <h3>Do you provide support?<span class="ind">+</span></h3>
+          <p>Yes, we offer post-launch maintenance and updates.</p>
+        </div>
+
+        <div class="faq-clean-item">
+          <h3>Can you redesign an existing website?<span class="ind">+</span></h3>
+          <p>Yes. We can keep your brand and rebuild the structure, UX and performance.</p>
+        </div>
+
+        <div class="faq-clean-item">
+          <h3>Do you include SEO?<span class="ind">+</span></h3>
+          <p>We include technical SEO foundations. Content strategy &amp; ongoing SEO is available as an add-on.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-right">
+      <div class="contact-box" id="contact" data-anim="yoyo">
+        <h2 class="contact-title">
+          Let’s build<br>something great
+        </h2>
+
+        <div class="contact-form">
+          <button class="contact-btn" id="contactActionBtn" data-open-contact>
+            <svg class="contact-arrow" viewBox="0 0 24 24">
+              <path d="M7 17L17 7M17 7H9M17 7V15"
+                    stroke="#FAF8F7"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="contact-mini">
+          <div class="contact-mini-row"><b>Email:</b> hello@example.com</div>
+          <div class="contact-mini-row"><b>Telegram:</b> @yourhandle</div>
+          <div class="contact-mini-row"><b>Location:</b> Vienna / Remote</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <a href="#" data-target="services">Services</a>
+        <a href="#" data-target="process">Process</a>
+        <a href="#" data-target="work">Our work</a>
+        <a href="#" data-target="pricing">Pricing</a>
+        <a href="#" data-target="faq">FAQ</a>
+        <a href="#" data-open-contact>Contact</a>
+      </div>
+
+      <div class="footer-col footer-col--right">
+        <div class="footer-brand">site-side</div>
+        <div class="footer-meta">Vienna <span id="viennaTime">--:--</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CONTACT OVERLAY (FULL SCREEN) ===== -->
+<div class="contact-overlay" id="contactOverlay" aria-hidden="true">
+  <div class="contact-overlay__scroller">
+
+    <!-- STEP 1: INTRO -->
+    <section class="contact-overlay__step contact-step contact-step--intro" aria-label="Contact intro">
+      <div class="contact-overlay__wrap  " data-speed="0.01" >
+        <h1 class="contact-hero-title">
+          Lets <span class="contact-accent">start!</span>
+        </h1>
+
+        <div class="contact-hero-cards" aria-label="Quick contact">
+          <div class="contact-card">
+            <div class="contact-card-label">Email us</div>
+            <a class="contact-card-value" href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-label">Call us</div>
+            <a class="contact-card-value" href="tel:+31202615080">+31 20 261 5080</a>
+          </div>
+        </div>
+
+        <button class="contact-start-btn" type="button" id="contactStartBtn">
+          Start a project
+        </button>
+      </div>
+    </section>
+
+    <section class="contact-overlay__step contact-step contact-step--form" aria-label="Contact form">
+      <div class="contact-overlay__wrap1 " >
+        <div class="contact-form-head">
+        </div>
+
+        <h2 class="contact-form-title">
+          Tell us about<br>
+          your <span class="contact-accent">project</span>
+        </h2>
+
+        <form class="contact-form-grid" id="contactForm" autocomplete="on">
+          <input class="cfield" name="firstName" placeholder="First name" autocomplete="given-name" required>
+          <input class="cfield" name="lastName" placeholder="Last name" autocomplete="family-name" required>
+          <input type="text" class="cfield" name="company" placeholder="Company">
+          <select class="cfield cselect" name="jobTitle" aria-label="Job title">
+            <option value="" selected disabled>Job title</option>
+            <option>Founder / CEO</option>
+            <option>Marketing</option>
+            <option>Product</option>
+            <option>Design</option>
+            <option>Engineering</option>
+            <option>Other</option>
+          </select>
+
+          <input class="cfield" type="email" name="email" placeholder="Email" autocomplete="email" required>
+          <select class="cfield cselect" name="country" aria-label="Country" required>
+            <option value="" selected disabled>Country</option>
+            <option>Austria</option>
+            <option>Germany</option>
+            <option>Netherlands</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Other</option>
+          </select>
+
+          <input class="cfield" type="tel" name="phone" placeholder="Phone" autocomplete="tel">
+          <select class="cfield cselect" name="industry" aria-label="Industry category">
+            <option value="" selected disabled>Industry category</option>
+            <option>SaaS</option>
+            <option>E-commerce</option>
+            <option>Services</option>
+            <option>Education</option>
+            <option>Other</option>
+          </select>
+
+          <select class="cfield cselect" name="revenue" aria-label="Revenue range">
+            <option value="" selected disabled>Revenue range</option>
+            <option>Pre-revenue</option>
+            <option>&lt; €100k</option>
+            <option>€100k–€1M</option>
+            <option>€1M–€10M</option>
+            <option>€10M+</option>
+          </select>
+
+          <select class="cfield cselect" name="service" aria-label="Which service interest you most?">
+            <option value="" selected disabled>Which service interest you most?</option>
+            <option>Landing page</option>
+            <option>Website redesign</option>
+            <option>Web app</option>
+            <option>SEO / performance</option>
+            <option>Not sure</option>
+          </select>
+
+          <select class="cfield cselect cfull" name="heard" aria-label="How did you hear about us?">
+            <option value="" selected disabled>How did you hear about us?</option>
+            <option>Google</option>
+            <option>Social media</option>
+            <option>Referral</option>
+            <option>Other</option>
+          </select>
+
+          <textarea class="cfield cfull ctextarea" name="message" placeholder="Tell us about your project (goals, timeline, budget)"></textarea>
+
+
+          <button class="contact-send-btn cfull" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===== GARAGE DOOR OVERLAY ===== -->
+<div id="garageDoor">
+  <div id="doorTitle"></div>
+</div>
+
+<!-- Scripts -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="script.js"></script>
+</body>
+</html>
