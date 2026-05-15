@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siteside — Modern Web Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Special+Elite&family=Jura:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/21.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-spinner"></div>
+  <div class="loader-label">Loading</div>
+</div>
+
+<!-- TOP BAR -->
+<header class="top">
+  <div class="left menu">
+    <button class="pill menu-btn" type="button" aria-expanded="false">
+      <span class="icon">
+        <span class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+        </span>
+      </span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <div class="menu-panel">
+      <button class="menu-item" type="button" data-target="home">Home</button>
+      <button class="menu-item" type="button" data-target="process">Process</button>
+      <button class="menu-item" type="button" data-target="work">Our work</button>
+      <button class="menu-item" type="button" data-target="about">About us</button>
+      <button class="menu-item" type="button" data-target="faq">FAQ</button>
+      <button class="menu-item" type="button" data-open-contact>Contact</button>
+    </div>
+  </div>
+
+  <div class="brand" id="brandLogo">
+    <div class="brand-layer brand-layer--white">
+      <span class="brand-text">site</span><i class="mark"></i><span class="brand-text">side</span>
+    </div>
+    <div class="brand-layer brand-layer--black" aria-hidden="true">
+      <span class="brand-text">site</span><i class="mark mark--dark"></i><span class="brand-text">side</span>
+    </div>
+  </div>
+
+  <button class="pill right" id="rightContactBtn" type="button" data-open-contact><span>Contact</span></button>
+</header>
+
+<!-- HERO -->
+<main class="hero" id="home">
+  <div class="stage">
+    <h1 class="word word-left parallax" data-speed="0.025">We build</h1>
+    <h1 class="word word-right parallax" data-speed="0.025">digital products</h1>
+    <div class="center">
+      <div class="parallax" data-speed="0.06">
+        <img class="art-img" src="images/programming-background-concept.png" alt="Artwork">
+        <div class="caption">Modern Web Studio<br>focused on performance &amp; growth</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ABOUT -->
+
+<section class="about-ask" id="about">
+  <div class="about-ask-inner">
+    <div class="about-ask-left">
+      <h1 class="wave-title about-h2" data-wave="About us"></h1>
+      <p class="about-p" data-anim>
+      <span class="about-highlight">Site-Side</span>
+       is youth-driven team of web developers and digital designers with a tone of experience in web-creating. Our journey began in September 2023 as a two-person crew. Our first project was a portfolio website for a friend of ours — a talented photographer who had just moved to North Carolina, USA. Today,  he receives offers every day because through, I'm not afraid to say that our work played a significant rule in his success.<span class="about-since">Since then, we've been building website with passion and precision, helping our clients grow. Are you ready to skyrocket your sales or turn your portfolio into a powerful digital presence?</span>
+      </p>
+    </div>
+    <div class="about-ask-right">
+      <div class="about-cards-grid">
+        <div class="about-card about-card-1">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600" alt="Team collaboration">
+          <div class="card-overlay"></div>
+        </div>
+        <div class="about-card about-card-2">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600" alt="Design process">
+          <div class="card-overlay"></div>
+          <div class="about-card-ornament"></div>
+        </div>
+        <div class="about-card about-card-3">
+          <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=600" alt="Project delivery">
+          <div class="card-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <!-- Animated Droplets Canvas -->
+  <canvas id="dropletsCanvas" class="droplets-canvas"></canvas>
+  
+  <div class="process-glow"></div>
+
+  <div class="process-inner">
+    <h2 class="wave-title process-title-wave" data-wave="How we build&#10;things"></h2>
+
+    <div class="board" id="board">
+      <svg id="ropeCanvas" overflow="visible" aria-hidden="true">
+        <path class="rope-shadow" id="rs12"/><path class="rope-shadow" id="rs23"/>
+        <path class="rope-shadow" id="rs34"/><path class="rope-shadow" id="rs45"/>
+        <path class="rope-thread" id="rt12"/><path class="rope-thread" id="rt23"/>
+        <path class="rope-thread" id="rt34"/><path class="rope-thread" id="rt45"/>
+        <circle class="rope-knot" id="k0" r="6"/><circle class="rope-knot" id="k1" r="6"/>
+        <circle class="rope-knot" id="k2" r="6"/><circle class="rope-knot" id="k3" r="6"/>
+        <circle class="rope-knot" id="k4" r="6"/>
+      </svg>
+
+      <div class="board__grid" id="cardsGrid">
+
+        <!-- STICKER CARD 1 — Navy Blue -->
+        <div class="note sticker-note sticker-card-1" data-idx="0">
+          <div class="note__pin-knot"></div>
+          <div class="sticker-inner">
+            <div class="sticker-border">
+              <div class="sticker-step">01</div>
+              <div class="sticker-emoji">🎯</div>
+              <h3 class="sticker-title">Define<br>the target</h3>
+              <div class="sticker-divider"></div>
+              <ul class="sticker-checklist">
+                <li>What does the site need to achieve — leads, trust, sales?</li>
+                <li>Who is the real audience and what do they need to see?</li>
+                <li>Where do competitors fall short?</li>
+              </ul>
+              <div class="sticker-tags">
+                <span class="stag">Discovery call</span>
+                <span class="stag">Competitor audit</span>
+                <span class="stag stag--gold">Brief</span>
+              </div>
+              <p class="sticker-duration">2 — 3 days</p>
+              <div class="sticker-badge">300 ML</div>
+            </div>
+          </div>
+          <div class="sticker-curl"></div>
+          <div class="sticker-shine"></div>
+        </div>
+
+        <!-- STICKER CARD 2 — Deep Red -->
+        <div class="note sticker-note sticker-card-2" data-idx="1">
+          <div class="note__pin-knot"></div>
+          <div class="sticker-inner">
+            <div class="sticker-border">
+              <div class="sticker-step">02</div>
+              <div class="sticker-emoji">🎨</div>
+              <h3 class="sticker-title">Shape<br>&amp; feel</h3>
+              <div class="sticker-divider"></div>
+              <ul class="sticker-checklist">
+                <li>Wireframes first — structure before decoration</li>
+                <li>Visual concept aligned with brand identity</li>
+                <li>Prototype reviewed and approved by client</li>
+              </ul>
+              <div class="sticker-tags">
+                <span class="stag">Wireframes</span>
+                <span class="stag">UI design</span>
+                <span class="stag stag--gold">Figma prototype</span>
+              </div>
+              <p class="sticker-duration">1 — 2 weeks</p>
+              <div class="sticker-badge sticker-badge--red">Sugar Free</div>
+            </div>
+          </div>
+          <div class="sticker-curl"></div>
+          <div class="sticker-shine"></div>
+        </div>
+
+        <!-- STICKER CARD 3 — Forest Green -->
+        <div class="note sticker-note sticker-card-3" data-idx="2">
+          <div class="note__pin-knot"></div>
+          <div class="sticker-inner">
+            <div class="sticker-border">
+              <div class="sticker-step">03</div>
+              <div class="sticker-emoji">⚙️</div>
+              <h3 class="sticker-title">Build<br>it clean</h3>
+              <div class="sticker-divider"></div>
+              <ul class="sticker-checklist">
+                <li>Semantic HTML, responsive, fast load times</li>
+                <li>CMS, forms, analytics, all integrations wired up</li>
+                <li>Code we won't be ashamed of in two years</li>
+              </ul>
+              <div class="sticker-tags">
+                <span class="stag">React / Next.js</span>
+                <span class="stag">SEO ready</span>
+                <span class="stag stag--gold">Performance first</span>
+              </div>
+              <p class="sticker-duration">2 — 4 weeks</p>
+              <div class="sticker-badge sticker-badge--green">On time</div>
+            </div>
+          </div>
+          <div class="sticker-curl"></div>
+          <div class="sticker-shine"></div>
+        </div>
+
+        <!-- STICKER CARD 4 — Deep Purple -->
+        <div class="note sticker-note sticker-card-4" data-idx="3">
+          <div class="note__pin-knot"></div>
+          <div class="sticker-inner">
+            <div class="sticker-border">
+              <div class="sticker-step">04</div>
+              <div class="sticker-emoji">🔍</div>
+              <h3 class="sticker-title">Break<br>it first</h3>
+              <div class="sticker-divider"></div>
+              <ul class="sticker-checklist">
+                <li>Cross-browser, mobile, edge cases</li>
+                <li>Lighthouse &amp; Core Web Vitals must be green</li>
+                <li>Nothing ships until everything passes</li>
+              </ul>
+              <div class="sticker-tags">
+                <span class="stag">Browser testing</span>
+                <span class="stag">Lighthouse</span>
+                <span class="stag stag--gold">CWV green</span>
+              </div>
+              <p class="sticker-duration">3 — 5 days</p>
+              <div class="sticker-badge sticker-badge--purple">100%</div>
+            </div>
+          </div>
+          <div class="sticker-curl"></div>
+          <div class="sticker-shine"></div>
+        </div>
+
+        <!-- STICKER CARD 5 — Dark Charcoal (wide) -->
+        <div class="note sticker-note sticker-card-5 note--final" data-idx="4">
+          <div class="note__pin-knot"></div>
+          <div class="sticker-inner sticker-inner--wide">
+            <div class="sticker-border sticker-border--wide">
+              <div class="sticker-final-left">
+                <div class="sticker-step">05 — 06</div>
+                <div class="sticker-emoji" style="font-size:52px">🚀</div>
+                <h3 class="sticker-title sticker-title--big">Ship.<br>Then keep<br>it running.</h3>
+                <div class="sticker-divider"></div>
+                <p class="sticker-body">Deploy to production, DNS, analytics wired up. After launch we stay on: maintenance, security patches, performance monitoring. The site keeps working — we make sure of it.</p>
+                <div class="sticker-tags">
+                  <span class="stag">Deploy</span>
+                  <span class="stag">DNS &amp; SSL</span>
+                  <span class="stag">Analytics</span>
+                  <span class="stag stag--gold">Ongoing support</span>
+                </div>
+              </div>
+              <div class="sticker-final-right">
+                <div class="final-stamp">GO<br>LIVE<span>website shipped</span></div>
+                <div class="sticker-badge sticker-badge--orange" style="position:relative;margin-top:20px">Ship it!</div>
+              </div>
+            </div>
+          </div>
+          <div class="sticker-curl sticker-curl--big"></div>
+          <div class="sticker-shine sticker-shine--wide"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK — NEW ANIMATED SLIDER -->
+<section class="work-slider" id="work">
+  <div class="work-slider-inner">
+    <h2 class="wave-title work-title" data-wave="Our Work"></h2>
+    
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        
+        <div class="slide" data-slide="0">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1200" alt="Black Cuts Studio">
+              <div class="slide-overlay"></div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-tag">Barbershop</span>
+              <h3 class="slide-title">Dagy's Barbershop Studio</h3>
+              <p class="slide-desc">Landing page for a premium barbershop in Vienna with online booking.</p>
+              <a href="https://www.barbervienna.at" target="_blank" class="slide-link">View project →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-slide="1">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtHTx_lC4zUF3_rDaBCRXsgd95JVOPQw7Ol0cqPkkN224PBVEYZ9Z-lcQcPaX937XssplFAz_PVTcSLOVl_BualNtv2p0z-ApJqXjbfbP4mpJWIvsvOKH_TB-n49BUoiXqfvzKcw=s680-w680-h510" alt="Nagano">
+              <div class="slide-overlay"></div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-tag">Japanese restaurant</span>
+              <h3 class="slide-title"><br>Nagano</h3>
+              <p class="slide-desc">Full web-site with custom CMS and lightning-fast checkout experience.</p>
+              <a href="https://www.nagano-wien.com" target="_blank" rel="noopener noreferrer" class="slide-link"> View project <span>→</span> </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-slide="2">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="https://meshit.at/wp-content/uploads/2023/01/8ea65c72-d6b0-45ad-b11f-8c5ffb6915c8-1024x678.jpg" alt="Trackr App">
+              <div class="slide-overlay"></div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-tag">E-store</span>
+              <h3 class="slide-title"><br>meshit</h3>
+              <p class="slide-desc">Bigest project so far, clean, big, beautiful.</p>
+            <a href="https://meshit.at" target="_blank" rel="noopener noreferrer" class="slide-link">View project <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-slide="3">
+          <div class="slide-content">
+            <div class="slide-image">
+              <img src="https://fs24.fex.net/preview/5386121631/1500x0" alt="Data Dashboard">
+              <div class="slide-overlay"></div>
+            </div>
+            <div class="slide-info">
+              <span class="slide-tag">web-portfolio</span>
+              <h3 class="slide-title"><br>Ok-photography studio</h3>
+              <p class="slide-desc">Our first case, clean and luxury design with fast loding time.</p>
+              <a href="https://ok-photography.us" target="_blank" rel="noopener noreferrer" class="slide-link">View project <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-nav">
+        <button class="slider-btn slider-btn--prev" id="sliderPrev">←</button>
+        <div class="slider-progress">
+          <span id="sliderCurrent">01</span>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span id="sliderTotal">04</span>
+        </div>
+        <button class="slider-btn slider-btn--next" id="sliderNext">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing" data-anim="fade">
+  <div class="pricing__bg-title">Pricing</div>
+  <div class="pricing__container">
+    <article class="pricing-card">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Starter Plan</p>
+        <h3 class="pricing-card__price">from 700€</h3>
+        <ul class="pricing-card__features">
+          <li>Landing page up to 5 sections</li>
+          <li>Mobile responsive</li>
+          <li>Basic SEO setup</li>
+          <li>Contact form</li>
+          <li>2 weeks delivery</li>
+        </ul>
+        <button class="pricing-card__btn" data-open-contact data-plan="Starter Plan">Get Started</button>
+      </div>
+    </article>
+    <article class="pricing-card active">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Standard Plan</p>
+        <h3 class="pricing-card__price">from 1000€</h3>
+        <ul class="pricing-card__features">
+          <li>Full website up to 10 pages</li>
+          <li>CMS integration</li>
+          <li>Advanced SEO</li>
+          <li>Custom animations</li>
+          <li>4 weeks delivery</li>
+        </ul>
+        <button class="pricing-card__btn" data-open-contact data-plan="Standard Plan">Get Started</button>
+      </div>
+    </article>
+    <article class="pricing-card">
+      <div class="pricing-card__inner">
+        <p class="pricing-card__label">Pro Plan</p>
+        <h3 class="pricing-card__price">Lets Talk!</h3>
+        <ul class="pricing-card__features">
+          <li>Web app / SaaS product</li>
+          <li>Custom backend &amp; API</li>
+          <li>Auth, dashboard, database</li>
+          <li>Performance monitoring</li>
+          <li>Ongoing support included</li>
+        </ul>
+        <button class="pricing-card__btn" data-open-contact data-plan="Pro Plan">Get Started</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FAQ + CONTACT -->
+<section class="contact-faq-split" id="faq" data-anim="fade">
+  <div class="split-inner">
+    <div class="split-left">
+      <h2 
+        class="wave-title section-title" 
+        data-wave="Frequently Asked&#10;Questions">
+      </h2>
+      <div class="faq-clean-list">
+        <div class="faq-clean-item">
+          <h3>How long does a website take?<span class="ind">+</span></h3>
+          <p>Usually between 2–6 weeks depending on scope.</p>
+        </div>
+        <div class="faq-clean-item">
+          <h3>What do you need to start?<span class="ind">+</span></h3>
+          <p>Basic information about your business, goals and content.</p>
+        </div>
+        <div class="faq-clean-item">
+          <h3>Do you provide support?<span class="ind">+</span></h3>
+          <p>Yes, we offer post-launch maintenance and updates.</p>
+        </div>
+        <div class="faq-clean-item">
+          <h3>Can you redesign an existing website?<span class="ind">+</span></h3>
+          <p>Yes. We can keep your brand and rebuild the structure, UX and performance.</p>
+        </div>
+        <div class="faq-clean-item">
+          <h3>Do you include SEO?<span class="ind">+</span></h3>
+          <p>We include technical SEO foundations. Content strategy &amp; ongoing SEO is available as an add-on.</p>
+        </div>
+      </div>
+    </div>
+    <div class="split-right">
+      <div class="contact-box" id="contact" data-anim="yoyo">
+        <h2 class="contact-title">Let's build<br>something great</h2>
+        <div class="contact-form">
+          <button class="contact-btn" data-open-contact>
+            <svg class="contact-arrow" viewBox="0 0 24 24">
+              <path d="M7 17L17 7M17 7H9M17 7V15" stroke="#FAF8F7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </button>
+        </div>
+        <div class="contact-mini">
+          <div class="contact-mini-row"  href="mailto:coop@site-side.store" ><b>Email:</b> coop@site-side.store</div>
+          <div class="contact-mini-row"><b>Telegram:</b> <a href="https://t.me/siteside_coop" target="_blank">@siteside_coop</a>
+          </div>
+          <div class="contact-mini-row"><b>Location:</b> Vienna / Remote</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <a data-target="process">Process</a>
+        <a data-target="work">Our work</a>
+        <a data-target="pricing">Pricing</a>
+        <a data-target="faq">FAQ</a>
+        <a data-open-contact>Contact</a>
+      </div>
+     
+      <div class="footer-col footer-col--right">
+        <div class="footer-brand">site-side</div>
+        <div class="footer-meta">Vienna <span id="viennaTime">--:--</span></div>
+        <div class="footer-col footer-col--divider">
+          <a data-open-policy>Privacy Policy</a>
+          <a data-open-terms>Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">©Site-Side 2026® — at your service</p>
+    </div>
+  </div>
+</footer>
+
+<!-- PRIVACY POLICY OVERLAY -->
+<div id="policyOverlay" class="policy-overlay" aria-hidden="true">
+  <button id="policyCloseBtn" aria-label="Close policy">✕</button>
+  <div class="policy-wrapper">
+    <div class="policy-content">
+      <div class="policy-header">
+        <h1>Privacy Policy</h1>
+        <p class="policy-date">Last updated: May 2026</p>
+      </div>
+      <div class="policy-body">
+        <p>Welcome to Site-side ("we", "our", "us").</p>
+        <p>This Privacy Policy explains how we collect, use, and protect information when you use our website and services available at site-side.store.</p>
+
+        <h2>1. Information We Collect</h2>
+        <p>We may collect and process the following information:</p>
+        <ul>
+          <li>Name and contact details</li>
+          <li>Email address</li>
+          <li>Billing and payment information</li>
+          <li>Account information</li>
+          <li>Messages and support requests</li>
+          <li>IP address and browser/device information</li>
+          <li>Usage data and analytics</li>
+          <li>Cookies and tracking technologies</li>
+          <li>Authentication data from third-party login providers</li>
+        </ul>
+
+        <h2>2. How We Use Information</h2>
+        <p>We use collected information to:</p>
+        <ul>
+          <li>Provide and maintain our services</li>
+          <li>Process orders and payments</li>
+          <li>Communicate with clients</li>
+          <li>Improve website functionality and user experience</li>
+          <li>Respond to support requests</li>
+          <li>Analyze usage and performance</li>
+          <li>Prevent fraud, abuse, and unauthorized access</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2>3. Cookies and Analytics</h2>
+        <p>We may use cookies, analytics tools, and similar technologies to:</p>
+        <ul>
+          <li>Remember user preferences</li>
+          <li>Analyze website traffic</li>
+          <li>Improve service performance</li>
+          <li>Personalize content and functionality</li>
+        </ul>
+        <p>You can disable cookies in your browser settings.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We may use third-party services including:</p>
+        <ul>
+          <li>Payment providers</li>
+          <li>Analytics providers</li>
+          <li>Hosting providers</li>
+          <li>Authentication providers</li>
+          <li>Communication and support tools</li>
+        </ul>
+        <p>These providers may process data according to their own privacy policies.</p>
+
+        <h2>5. Data Sharing</h2>
+        <p>We do not sell personal information.</p>
+        <p>We may share data only:</p>
+        <ul>
+          <li>With trusted service providers working on our behalf</li>
+          <li>When legally required</li>
+          <li>To protect our rights, users, and platform security</li>
+        </ul>
+
+        <h2>6. Data Security</h2>
+        <p>We implement reasonable technical and organizational measures to protect information from unauthorized access, disclosure, or misuse.</p>
+        <p>However, no method of transmission over the internet is completely secure.</p>
+
+        <h2>7. User Rights</h2>
+        <p>Depending on applicable laws, users may have the right to:</p>
+        <ul>
+          <li>Access their personal data</li>
+          <li>Request corrections</li>
+          <li>Request deletion of data</li>
+          <li>Object to certain processing activities</li>
+        </ul>
+        <p>Requests can be submitted to: <a href="mailto:coop@site-side.store">coop@site-side.store</a></p>
+
+        <h2>8. Service Availability</h2>
+        <p>We may update, modify, or discontinue parts of the service at any time.</p>
+
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically. Updated versions will be posted on this page.</p>
+
+        <h2>10. Contact</h2>
+        <p><strong>Site-side</strong><br>Email: <a href="mailto:coop@site-side.store">coop@site-side.store</a><br>Austria</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT OVERLAY -->
+<div id="contactOverlay" class="contact-overlay" aria-hidden="true">
+  <button id="contactCloseBtn" aria-label="Close contact">✕</button>
+
+  <!-- Step 1: Intro -->
+  <div class="contact-overlay__step contact-step contact-step--intro">
+    <div class="contact-overlay__wrap">
+      <h1 class="contact-hero-title">Lets <span class="contact-accent">start!</span></h1>
+      <div class="contact-hero-cards">
+        <div class="contact-card">
+          <div class="contact-card-label">Email us</div>
+          <a class="contact-card-value" href="mailto:coop@site-side.store">coop@site-side.store</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-label">Call us</div>
+          <a class="contact-card-value" href="tel:+436901042440">+43 690 10424402</a>
+        </div>
+      </div>
+      <button class="contact-start-btn" type="button" id="contactStartBtn">Start a project</button>
+    </div>
+  </div>
+
+  <!-- Step 2: Form with Web3Forms Integration -->
+  <div class="contact-overlay__step contact-step contact-step--form">
+    <div class="contact-overlay__wrap1">
+      <h2 class="contact-form-title">Tell us about<br>your <span class="contact-accent">project</span></h2>
+      <form class="contact-form-grid" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="98d51a20-769a-4f3e-a8d6-5eac39f080c7">
+        
+        <input class="cfield" name="firstName" placeholder="First name" required>
+        <input class="cfield" name="lastName" placeholder="Last name" required>
+        <input class="cfield" name="company" placeholder="Company">
+        <select class="cfield cselect" name="jobTitle">
+          <option value="" disabled selected>Job title</option>
+          <option>Founder / CEO</option><option>Marketing</option><option>Product</option>
+          <option>Design</option><option>Engineering</option><option>Other</option>
+        </select>
+        <input class="cfield" type="email" name="email" placeholder="Email" required>
+        <select class="cfield cselect" name="country" required>
+          <option value="" disabled selected>Country</option>
+          <option>Austria</option><option>Germany</option><option>Netherlands</option>
+          <option>United Kingdom</option><option>United States</option><option>Other</option>
+        </select>
+        <input class="cfield" type="tel" name="phone" placeholder="Phone">
+        <select class="cfield cselect" name="industry">
+          <option value="" disabled selected>Industry category</option>
+          <option>SaaS</option><option>E-commerce</option><option>Services</option>
+          <option>Education</option><option>Other</option>
+        </select>
+        <select class="cfield cselect cfull" name="plan">
+          <option value="">Which plan interests you?</option>
+          <option>Starter Plan</option>
+          <option>Standard Plan</option>
+          <option>Pro Plan</option>
+        </select>
+        <select class="cfield cselect" name="service">
+          <option value="" disabled selected>Which service?</option>
+          <option>Landing page</option><option>Website redesign</option><option>Web app</option>
+          <option>SEO / performance</option><option>Not sure</option>
+        </select>
+        <select class="cfield cselect" name="heard">
+          <option value="" disabled selected>How did you hear about us?</option>
+          <option>Google</option><option>Social media</option><option>Referral</option><option>Other</option>
+        </select>
+        <textarea class="cfield cfull ctextarea" name="message" placeholder="Tell us about your project (goals, timeline, budget)"></textarea>
+        
+        <button class="contact-send-btn cfull" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- TERMS OF USE OVERLAY -->
+<div id="termsOverlay" class="policy-overlay" aria-hidden="true">
+  <button id="termsCloseBtn" aria-label="Close terms">✕</button>
+  <div class="policy-wrapper">
+    <div class="policy-content">
+      <div class="policy-header">
+        <h1>Terms of Service</h1>
+        <p class="policy-date">Last updated: May 2026</p>
+      </div>
+      <div class="policy-body">
+        <p>These Terms of Service ("Terms") govern your use of the Site-side website and services available at site-side.store.</p>
+        <p>By accessing or using the service, you agree to these Terms.</p>
+
+        <h2>1. Services</h2>
+        <p>Site-side provides website development, web design, and related digital services.</p>
+
+        <h2>2. Use of Website</h2>
+        <p>You agree to use the website lawfully and responsibly.</p>
+        <p>You must not:</p>
+        <ul>
+          <li>Violate applicable laws</li>
+          <li>Attempt unauthorized access</li>
+          <li>Interfere with website operation</li>
+          <li>Distribute malicious software</li>
+          <li>Misuse the platform or services</li>
+        </ul>
+
+        <h2>3. Orders and Payments</h2>
+        <p>Some services may require payment. By purchasing services, you agree to provide accurate billing information and complete payments in accordance with agreed terms.</p>
+
+        <h2>4. Intellectual Property</h2>
+        <p>All website content, branding, designs, graphics, software, and materials belong to Site-side unless otherwise stated. Clients retain ownership of materials provided by them.</p>
+
+        <h2>5. Project Delivery</h2>
+        <p>Project timelines, revisions, and deliverables may vary depending on scope and communication. We reserve the right to refuse service requests that violate laws or ethical standards.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Site-side shall not be liable for:</p>
+        <ul>
+          <li>Indirect or consequential damages</li>
+          <li>Loss of profits</li>
+          <li>Business interruption</li>
+          <li>Data loss</li>
+        </ul>
+        <p>Services are provided "as is" without guarantees of uninterrupted availability.</p>
+
+        <h2>7. Third-Party Services</h2>
+        <p>We may integrate or use third-party tools, hosting providers, payment systems, or APIs. We are not responsible for third-party services or their availability.</p>
+
+        <h2>8. Termination</h2>
+        <p>We may suspend or terminate access to services for violations of these Terms or abusive behavior.</p>
+
+        <h2>9. Governing Law</h2>
+        <p>These Terms are governed by the laws of Austria.</p>
+
+        <h2>10. Changes to Terms</h2>
+        <p>We may update these Terms periodically. Continued use of the website constitutes acceptance of updated Terms.</p>
+
+        <h2>11. Contact</h2>
+        <p><strong>Site-side</strong><br>Email: <a href="mailto:coop@site-side.store">coop@site-side.store</a><br>Austria</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE TRANSITION OVERLAY -->
+<div id="pageTransition" class="page-transition"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

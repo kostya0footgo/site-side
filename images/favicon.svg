@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#cc44ee"/>
+      <stop offset="14%"  stop-color="#8866ff"/>
+      <stop offset="28%"  stop-color="#44aaff"/>
+      <stop offset="42%"  stop-color="#22ddcc"/>
+      <stop offset="56%"  stop-color="#99ee44"/>
+      <stop offset="70%"  stop-color="#eedd22"/>
+      <stop offset="84%"  stop-color="#ff9922"/>
+      <stop offset="100%" stop-color="#ff5533"/>
+    </linearGradient>
+    <linearGradient id="cardBody" x1="100%" y1="0%" x2="20%" y2="80%">
+      <stop offset="0%"   stop-color="#d8f0ff"/>
+      <stop offset="30%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="bottomWarm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#aaf0e0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffcc88" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="curlSheen" cx="100%" cy="0%" r="45%">
+      <stop offset="0%"   stop-color="#c8eeff"/>
+      <stop offset="60%"  stop-color="#e8f8ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffffff"  stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="innerCard">
+      <rect x="32" y="32" width="448" height="448" rx="82" ry="82"/>
+    </clipPath>
+    <filter id="outerShadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <!-- Google Fonts: Black Han Sans for ultra-bold CJK-compatible display -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Black+Han+Sans&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Outer rainbow border -->
+  <rect x="0" y="0" width="512" height="512" rx="110" ry="110"
+        fill="url(#rainbow)" filter="url(#outerShadow)"/>
+
+  <!-- White card -->
+  <rect x="32" y="32" width="448" height="448" rx="82" ry="82"
+        fill="url(#cardBody)"/>
+
+  <!-- Warm bottom overlay -->
+  <rect x="32" y="290" width="448" height="190" fill="url(#bottomWarm)"
+        clip-path="url(#innerCard)"/>
+
+  <!-- Black screen area -->
+  <rect x="32" y="32" width="448" height="306" rx="82" ry="82" fill="#000"/>
+  <rect x="32" y="260" width="448" height="78" fill="#000"/>
+
+  <!-- Page curl -->
+  <polygon points="388,32 480,32 480,124"
+           fill="#ffffff" opacity="0.07" clip-path="url(#innerCard)"/>
+  <polygon points="388,32 480,32 480,124"
+           fill="url(#curlSheen)" clip-path="url(#innerCard)"/>
+  <line x1="388" y1="32" x2="480" y2="124"
+        stroke="#b8e8ff" stroke-width="1.5" opacity="0.8" clip-path="url(#innerCard)"/>
+
+  <!--
+    s/s drawn as outlines/paths so rendering is font-independent.
+    Two "S" glyphs hand-crafted as rounded rectangles with cutouts,
+    plus a bold slash. Centered around x=256, y=218.
+
+    Each S is built from two arcs (top bowl + bottom bowl) approximated
+    with a compact path. We use a thick stroke approach: draw each S
+    as a stroked open path with round caps/joins so it looks like a
+    fat bold letterform regardless of environment.
+  -->
+
+  <!-- LEFT "s" — center around x=168, y=218, size ~110px tall -->
+  <g transform="translate(168,218)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="22">
+    <!-- Top arc of S: curves from right side at top, sweeps left, goes to middle -->
+    <path d="
+      M  30,-42
+      C  30,-55  18,-62   0,-62
+      C -22,-62 -36,-50 -36,-34
+      C -36,-18 -22,-10   0, -2
+      C  22,  6  36, 16  36, 34
+      C  36, 50  22, 62   0, 62
+      C -18, 62 -30, 55 -30, 42
+    "/>
+  </g>
+
+  <!-- SLASH — a bold diagonal line between the two S letters -->
+  <line x1="222" y1="278" x2="290" y2="158"
+        stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- RIGHT "s" — mirror of left, center around x=344, y=218 -->
+  <g transform="translate(344,218)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="22">
+    <path d="
+      M  30,-42
+      C  30,-55  18,-62   0,-62
+      C -22,-62 -36,-50 -36,-34
+      C -36,-18 -22,-10   0, -2
+      C  22,  6  36, 16  36, 34
+      C  36, 50  22, 62   0, 62
+      C -18, 62 -30, 55 -30, 42
+    "/>
+  </g>
+
+  <!-- Divider line -->
+  <line x1="48" y1="338" x2="464" y2="338" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- White label area -->
+  <rect x="32" y="338" width="448" height="142" fill="#ffffff" clip-path="url(#innerCard)"/>
+  <rect x="32" y="440" width="448" height="40" fill="#f5f5f5" clip-path="url(#innerCard)"/>
+
+  <!-- HTML — using a safe system font stack, all-caps condensed -->
+  <text x="256" y="412"
+        font-family="'Impact', 'Arial Narrow', 'Franklin Gothic Medium', Arial, sans-serif"
+        font-weight="900"
+        font-size="108"
+        fill="#000000"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        letter-spacing="3">HTML</text>
+</svg>
